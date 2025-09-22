@@ -247,7 +247,7 @@ endmodule
 ### **📊 Waveform Viewer Analysis**
 
 **🌊 GTKWave Interface Overview:**
-![GTKWave Simulation Results](images/gtk_waveform.png)
+![GTKWave Simulation Results](Day1/Images/gtk_waveform.png)
 
 **Key Observations from Waveform:**
 - **🎯 Signal Structure**: All 4 signals (i0, i1, sel, y) clearly visible
@@ -360,7 +360,7 @@ vim good_mux_netlist.v
 ### **📊 Generated Netlist Analysis**
 
 **🎯 Yosys Generated Netlist:**
-![Yosys Generated Netlist](images/logic_synthesizer.png)
+![Yosys Generated Netlist]((Day1/Images/logic_synthesizer.png)
 
 The synthesized netlist reveals:
 
@@ -393,7 +393,7 @@ endmodule
 ```
 
 **🌊 Synthesized Schematic View:**
-![Synthesis Schematic](images/logic_synthesizer.png)
+![Synthesis Schematic](Day1/Images/logic_synthesizer.png)
 
 ### **🧬 Phase 6: Technology Mapping Analysis**
 

@@ -116,35 +116,26 @@ drwxr-xr-x  3 user user 4096 my_lib/
 -rw-r--r--  1 user user 1234 README.md
 ```
 
-### **🔍 Phase 2: Design Files Reconnaissance**
+### **📂 Phase 2: Complete Design Arsenal Overview**
 ```bash
 # 📂 Enter the verilog battlefield
 cd verilog_files
 
-# 📊 Survey the design landscape
-ls -la | head -20
-
-# 🎯 Count available designs
-ls *.v | wc -l
+# 📊 Display all available design files
+ls
 ```
 
-### **📖 Phase 3: Core Design Analysis**
-```bash
-# 🔬 Analyze the perfect multiplexer
-cat good_mux.v
-
-# 🧪 Study the testbench architecture  
-cat tb_good_mux.v
-
-# 🕵️ Compare with problematic design
-cat bad_mux.v
-```
+**🎯 Complete Design Library Visualization:**
+![Verilog Files Directory](Day1/Images/verilog_files_directory.png)
 
 **🎯 Key Files Discovered:**
-- ✅ `good_mux.v` - Reference implementation
-- ✅ `tb_good_mux.v` - Comprehensive testbench
-- ✅ `bad_mux.v` - Anti-pattern example
-- ✅ `150+ design files` - Complete library
+- ✅ `good_mux.v` - Perfect 2:1 Multiplexer implementation
+- ✅ `tb_good_mux.v` - Comprehensive testbench architecture
+- ✅ `bad_mux.v` - Anti-pattern example for comparison
+- ✅ `150+ design files` - Complete RTL design library
+- ✅ Multiple testbenches (`tb_*.v`) - Verification suite
+- ✅ Complex modules (counters, FSMs, arithmetic units)
+- ✅ Educational examples (good vs bad implementations)
 
 ---
 
@@ -247,7 +238,7 @@ endmodule
 ### **📊 Waveform Viewer Analysis**
 
 **🌊 GTKWave Interface Overview:**
-![GTKWave Simulation Results](Day1/Images/gtk_waveform.png)
+![GTKWave Simulation Results](images/gtkwave_waveform.png)
 
 **Key Observations from Waveform:**
 - **🎯 Signal Structure**: All 4 signals (i0, i1, sel, y) clearly visible
@@ -360,7 +351,7 @@ vim good_mux_netlist.v
 ### **📊 Generated Netlist Analysis**
 
 **🎯 Yosys Generated Netlist:**
-![Yosys Generated Netlist](Day1/Images/netlist.png)
+![Yosys Generated Netlist](images/yosys_generated_netlist.png)
 
 The synthesized netlist reveals:
 
@@ -393,7 +384,7 @@ endmodule
 ```
 
 **🌊 Synthesized Schematic View:**
-![Synthesis Schematic](Day1/Images/logic_synthesizer.png)
+![Synthesis Schematic](images/synthesis_schematic.png)
 
 ### **🧬 Phase 6: Technology Mapping Analysis**
 
@@ -519,12 +510,12 @@ iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 \
 ## 🎯 **Knowledge Arsenal Unlocked**
 
 ### **🧠 Core Concepts Mastered**
-**RTL Design Methodology** - Behavioral modeling excellence
-**Testbench Architecture** - Comprehensive verification strategy  
-**Simulation Flow** - Complete iVerilog + GTKWave mastery
-**Synthesis Process** - RTL-to-gates transformation
-**Standard Cell Libraries** - Technology mapping understanding
-**Design Quality** - Verification and analysis techniques
+1. **RTL Design Methodology** - Behavioral modeling excellence
+2. **Testbench Architecture** - Comprehensive verification strategy  
+3. **Simulation Flow** - Complete iVerilog + GTKWave mastery
+4. **Synthesis Process** - RTL-to-gates transformation
+5. **Standard Cell Libraries** - Technology mapping understanding
+6. **Design Quality** - Verification and analysis techniques
 
 ### **⚡ Advanced Skills Acquired**
 - Multi-phase lab execution
@@ -543,16 +534,17 @@ iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 \
 
 [![Status](https://img.shields.io/badge/Day%201-MASTERY%20ACHIEVED-brightgreen?style=for-the-badge)](#)
 [![Labs](https://img.shields.io/badge/All%20Labs-CONQUERED-gold?style=for-the-badge)](#)
+[![Next](https://img.shields.io/badge/Next-DAY%202%20WARFARE-purple?style=for-the-badge)](#)
 
 ---
 
 ### 📡 **Support Command Center**
 🆘 **Emergency Protocols:**
-📊 Verify tool installations (`yosys --version`, `iverilog -V`)
-🔐 Check file permissions (`chmod +x a.out`)
-🧬 Validate library paths
-📖 Review synthesis logs for warnings
-🎯 Cross-verify simulation vs synthesis results
+1. 📊 Verify tool installations (`yosys --version`, `iverilog -V`)
+2. 🔐 Check file permissions (`chmod +x a.out`)
+3. 🧬 Validate library paths
+4. 📖 Review synthesis logs for warnings
+5. 🎯 Cross-verify simulation vs synthesis results
 
 **🎯 Remember: Perfect methodology today builds perfect chips tomorrow! ⚡**
 

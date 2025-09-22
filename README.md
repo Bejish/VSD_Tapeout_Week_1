@@ -244,12 +244,27 @@ module tb_good_mux;
 endmodule
 ```
 
+### **📊 Waveform Viewer Analysis**
+
+**🌊 GTKWave Interface Overview:**
+![GTKWave Simulation Results](images/gtkwave_waveform.png)
+
+**Key Observations from Waveform:**
+- **🎯 Signal Structure**: All 4 signals (i0, i1, sel, y) clearly visible
+- **⏱️ Time Scale**: 300ns simulation window (0-300ns)
+- **🔄 Input Patterns**: 
+  - `i0`: Regular toggling pattern (~10ns period)
+  - `i1`: Different toggling pattern (~55ns period)  
+  - `sel`: Control signal switching (~75ns period)
+- **📊 Output Behavior**: `y` follows perfect mux logic (y = sel ? i1 : i0)
+
 ### **📈 Waveform Analysis Checklist**
-- [ ] 🎯 Input signal transitions visible
-- [ ] 🔄 Output follows expected mux behavior  
-- [ ] ⏱️ Timing relationships correct
-- [ ] 🚨 No glitches or undefined states
-- [ ] 📊 All test vectors covered
+- [x] 🎯 Input signal transitions clearly visible
+- [x] 🔄 Output follows expected mux behavior perfectly
+- [x] ⏱️ Timing relationships are correct (combinational logic)
+- [x] 🚨 No glitches or undefined states detected
+- [x] 📊 All test vectors covered in 300ns window
+- [x] 🌊 GTKWave interface functioning properly
 
 ---
 

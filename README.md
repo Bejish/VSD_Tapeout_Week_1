@@ -109,6 +109,13 @@ cd sky130RTLDesignAndSynthesisWorkshop
 ls -la
 ```
 
+**Expected Intelligence:**
+```
+drwxr-xr-x  4 user user 4096 verilog_files/
+drwxr-xr-x  3 user user 4096 my_lib/
+-rw-r--r--  1 user user 1234 README.md
+```
+
 ### **📂 Phase 2: Complete Design Arsenal Overview**
 ```bash
 # 📂 Enter the verilog battlefield
@@ -119,7 +126,7 @@ ls
 ```
 
 **🎯 Complete Design Library Visualization:**
-![Verilog Files Directory](Day1/Images/files_directory.png)
+![Verilog Files Directory](Day1/Images/verilog_files_directory.png)
 
 **🎯 Key Files Discovered:**
 - ✅ `good_mux.v` - Perfect 2:1 Multiplexer implementation
@@ -231,7 +238,7 @@ endmodule
 ### **📊 Waveform Viewer Analysis**
 
 **🌊 GTKWave Interface Overview:**
-![GTKWave Simulation Results](Day1/Images/gtk_waveform.png)
+![GTKWave Simulation Results](images/gtkwave_waveform.png)
 
 **Key Observations from Waveform:**
 - **🎯 Signal Structure**: All 4 signals (i0, i1, sel, y) clearly visible
@@ -344,7 +351,7 @@ vim good_mux_netlist.v
 ### **📊 Generated Netlist Analysis**
 
 **🎯 Yosys Generated Netlist:**
-![Yosys Generated Netlist](Day1/Images/netlist.png)
+![Yosys Generated Netlist](images/yosys_generated_netlist.png)
 
 The synthesized netlist reveals:
 
@@ -377,7 +384,7 @@ endmodule
 ```
 
 **🌊 Synthesized Schematic View:**
-![Synthesis Schematic](Day1/Images/logic_synthesizer.png)
+![Synthesis Schematic](images/synthesis_schematic.png)
 
 ### **🧬 Phase 6: Technology Mapping Analysis**
 
@@ -394,6 +401,83 @@ endmodule
 | **Voltage** | 1.8V | Operating voltage |
 | **Process** | 130nm | Technology node |
 | **Area** | Optimized | Minimum area implementation |
+
+---
+
+## 🧠 **Synthesis Theory & Fundamentals**
+
+### **⚡ Understanding Cell Selection Strategy**
+
+**🎯 Faster Cells vs Slower Cells Trade-offs:**
+![Faster vs Slower Cells](Day1/Images/faster_vs_slower_cells.png)
+
+**Key Insights:**
+- **Load in Digital Logic**: Every connection represents capacitance
+- **Speed vs Power**: Faster charging/discharging requires wider transistors
+- **Area Trade-off**: Wider transistors = Lower delay but Higher area & power
+- **Design Balance**: Faster cells come at the penalty of area and power consumption
+
+### **🎛️ Selection of Cells Strategy**
+![Selection of Cells](Day1/Images/selection_of_cells.png)
+
+**Synthesis Guidance Principles:**
+- **Optimal Implementation**: Guide synthesizer to select the right cell flavour
+- **Faster Cells Overuse**: Bad circuit in terms of power and area, potential hold time violations
+- **Slower Cells Overuse**: Sluggish circuit, may not meet performance requirements
+- **Constraints**: The guidance offered to synthesizer for optimal cell selection
+
+### **🔧 Why We Need Both Fast and Slow Cells**
+
+**Hold Time Requirements:**
+![Why Slow Cells](Day1/Images/why_slow_cells.png)
+
+**Critical Timing Equation:**
+```
+T_HOLD_B < T_CQ_A + T_COMBI
+```
+
+**Setup Time Requirements:**
+![Why Fast Cells](Day1/Images/why_fast_cells.png)
+
+**Critical Timing Equation:**
+```
+T_CLK > T_CQ_A + T_COMBI + T_SETUP_B
+```
+
+**🎯 Strategic Cell Usage:**
+- **Fast Cells**: Meet performance requirements and reduce T_COMBI
+- **Slow Cells**: Meet HOLD requirements without hold violations
+- **Library Collection**: The combination forms the complete .lib file
+
+### **📚 What is .lib File**
+![What is .lib](Day1/Images/what_is_lib.png)
+
+**Library Characteristics:**
+- **Collection**: Logical modules (AND, OR, NOT gates)
+- **Flavours**: Different speed variants of same gate
+  - 2-input AND: Slow, Medium, Fast variants
+  - 3-input AND: Slow, Medium, Fast variants  
+  - 4-input AND: Slow, Medium, Fast variants
+- **Comprehensive**: All basic logic gates with multiple performance options
+
+### **🏗️ RTL Design to Synthesis Flow**
+
+**RTL Design Concept:**
+![RTL Design](Day1/Images/rtl_design.png)
+
+**RTL Characteristics:**
+- **Behavioral Representation**: High-level specification description
+- **Clock-based Logic**: Sequential and combinational elements
+- **Technology Independent**: No specific library dependencies
+
+**Complete Synthesis Process:**
+![Synthesis Process](Day1/Images/synthesis_process.png)
+
+**Synthesis Transformation:**
+- **Input**: RTL behavioral code + Front End LIB
+- **Process**: RTL to Gate level translation
+- **Output**: Technology-mapped NETLIST
+- **Result**: Gate-level implementation with library-specific cells
 
 ---
 
@@ -527,16 +611,17 @@ iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 \
 
 [![Status](https://img.shields.io/badge/Day%201-MASTERY%20ACHIEVED-brightgreen?style=for-the-badge)](#)
 [![Labs](https://img.shields.io/badge/All%20Labs-CONQUERED-gold?style=for-the-badge)](#)
+[![Next](https://img.shields.io/badge/Next-DAY%202%20WARFARE-purple?style=for-the-badge)](#)
 
 ---
 
 ### 📡 **Support Command Center**
 🆘 **Emergency Protocols:**
-📊 Verify tool installations (`yosys --version`, `iverilog -V`)
-🔐 Check file permissions (`chmod +x a.out`)
-🧬 Validate library paths
-📖 Review synthesis logs for warnings
-🎯 Cross-verify simulation vs synthesis results
+1. 📊 Verify tool installations (`yosys --version`, `iverilog -V`)
+2. 🔐 Check file permissions (`chmod +x a.out`)
+3. 🧬 Validate library paths
+4. 📖 Review synthesis logs for warnings
+5. 🎯 Cross-verify simulation vs synthesis results
 
 **🎯 Remember: Perfect methodology today builds perfect chips tomorrow! ⚡**
 

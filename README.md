@@ -500,6 +500,14 @@ module good_mux(i0, i1, sel, y);
 endmodule
 ```
 
+**🔍 Actual Yosys Generated Netlist:**
+![Yosys Generated Netlist](path/to/your/yosys_netlist_image.png)
+*Complete netlist showing Yosys synthesis output with sky130 standard cells*
+
+**📊 Synthesized Schematic View:**
+![Synthesis Schematic](path/to/your/synthesis_schematic_image.png)
+*Visual representation of the synthesized multiplexer using sky130_fd_sc_hd__mux2_1 standard cell*
+
 ### **🧪 Mission 3: Verification Protocol**
 *Ensuring functional equivalence*
 

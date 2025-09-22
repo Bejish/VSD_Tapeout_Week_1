@@ -437,7 +437,7 @@ T_HOLD_B < T_CQ_A + T_COMBI
 ```
 
 **Setup Time Requirements:**
-![Why Fast Cells](Day1/Images/why_fast_cells.png)
+![Why Fast Cells](Day1/Images/fast_cells.png)
 
 **Critical Timing Equation:**
 ```

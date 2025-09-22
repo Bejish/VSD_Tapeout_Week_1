@@ -126,7 +126,7 @@ ls
 ```
 
 **🎯 Complete Design Library Visualization:**
-![Verilog Files Directory](Day1/Images/verilog_files_directory.png)
+![Verilog Files Directory](Day1/Images/files_directory.png)
 
 **🎯 Key Files Discovered:**
 - ✅ `good_mux.v` - Perfect 2:1 Multiplexer implementation
@@ -238,7 +238,7 @@ endmodule
 ### **📊 Waveform Viewer Analysis**
 
 **🌊 GTKWave Interface Overview:**
-![GTKWave Simulation Results](images/gtkwave_waveform.png)
+![GTKWave Simulation Results](Day1/Images/gtk_waveform.png)
 
 **Key Observations from Waveform:**
 - **🎯 Signal Structure**: All 4 signals (i0, i1, sel, y) clearly visible
@@ -351,7 +351,7 @@ vim good_mux_netlist.v
 ### **📊 Generated Netlist Analysis**
 
 **🎯 Yosys Generated Netlist:**
-![Yosys Generated Netlist](images/yosys_generated_netlist.png)
+![Yosys Generated Netlist](Day1/Images/netlist.png)
 
 The synthesized netlist reveals:
 
@@ -384,7 +384,7 @@ endmodule
 ```
 
 **🌊 Synthesized Schematic View:**
-![Synthesis Schematic](images/synthesis_schematic.png)
+![Synthesis Schematic](Day1/Images/logic_synthesizer.png)
 
 ### **🧬 Phase 6: Technology Mapping Analysis**
 

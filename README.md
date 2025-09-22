@@ -247,7 +247,7 @@ endmodule
 ### **📊 Waveform Viewer Analysis**
 
 **🌊 GTKWave Interface Overview:**
-![GTKWave Simulation Results](images/gtkwave_waveform.png)
+![GTKWave Simulation Results](images/Screenshot 2025-09-22 183945.png)
 
 **Key Observations from Waveform:**
 - **🎯 Signal Structure**: All 4 signals (i0, i1, sel, y) clearly visible

@@ -152,35 +152,48 @@ gtkwave tb_good_mux.vcd
 
 </div>
 
-#### **🎯 Testbench Architecture Mastery**
+#### **🎯 Code Examples from Lab**
 
-**Clock Generation Engine:**
+**📋 Testbench Structure (tb_good_mux.v):**
 ```verilog
-initial begin
-    clk = 0;
-    forever #10 clk = ~clk;  // 🔄 20ns period heartbeat
-end
+`timescale 1ns / 1ps
+module tb_good_mux;
+    // Inputs
+    reg i0,i1,sel;
+    // Outputs
+    wire y;
+
+    // Instantiate the Unit Under Test (UUT)
+    good_mux uut (
+        .sel(sel),
+        .i0(i0),
+        .i1(i1),
+        .y(y)
+    );
+
+    initial begin
+        $dumpfile("tb_good_mux.vcd");
+        $dumpvars(0,tb_good_mux);
+        // Initialize Inputs
+        sel = 0;
+        i0 = 0;
+        i1 = 0;
+        #300 $finish;
+    end
+endmodule
 ```
 
-**Stimulus Command Center:**
+**🔧 Design Module (good_mux.v):**
 ```verilog
-initial begin
-    // 🎬 Initialize the battlefield
-    sel = 0; i0 = 0; i1 = 0;
-    
-    // ⚡ Deploy test vectors
-    #100 sel = 0; i0 = 1; i1 = 0;  // Test case Alpha
-    #100 sel = 1; i0 = 1; i1 = 0;  // Test case Beta
-    // 🎯 Strategic test patterns...
-end
-```
-
-**Response Surveillance System:**
-```verilog
-initial begin
-    $monitor("🕐 Time=%0t 🎛️ sel=%b i0=%b i1=%b ➡️ y=%b", 
-             $time, sel, i0, i1, y);
-end
+module good_mux (input i0, input i1, input sel, output reg y);
+    always @(*)
+    begin
+        if(sel)
+            y <= i1;
+        else
+            y <= i0;
+    end
+endmodule
 ```
 
 ### **🔬 Mission 4: Design Quality Assessment**
@@ -273,16 +286,6 @@ gtkwave tb_bad_mux.vcd
 - `tb_good_mux.vcd` (waveform intelligence)
 - GTKWave tactical save file
 - Mission debrief documentation
-
----
-
-## 🚀 **Next Mission Prep: Day 2**
-*Advancing to synthesis command*
-
-- 🔬 Review synthesis methodologies  
-- 📚 Study library file architectures  
-- 🏗️ Prepare for hierarchical battles  
-- 🎯 Master standard cell libraries  
 
 ---
 

@@ -360,7 +360,7 @@ vim good_mux_netlist.v
 ### **📊 Generated Netlist Analysis**
 
 **🎯 Yosys Generated Netlist:**
-![Yosys Generated Netlist]((Day1/Images/logic_synthesizer.png)
+![Yosys Generated Netlist](Day1/Images/logic_synthesizer.png)
 
 The synthesized netlist reveals:
 

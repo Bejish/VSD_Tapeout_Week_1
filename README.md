@@ -409,7 +409,7 @@ endmodule
 ### **⚡ Understanding Cell Selection Strategy**
 
 **🎯 Faster Cells vs Slower Cells Trade-offs:**
-![Faster vs Slower Cells](Day1/Images/faster_vs_slower_cells.png)
+![Faster vs Slower Cells](Day1/Images/fastervsslower.png)
 
 **Key Insights:**
 - **Load in Digital Logic**: Every connection represents capacitance
@@ -418,7 +418,7 @@ endmodule
 - **Design Balance**: Faster cells come at the penalty of area and power consumption
 
 ### **🎛️ Selection of Cells Strategy**
-![Selection of Cells](Day1/Images/selection_of_cells.png)
+![Selection of Cells](Day1/Images/selection_cells.png)
 
 **Synthesis Guidance Principles:**
 - **Optimal Implementation**: Guide synthesizer to select the right cell flavour
@@ -429,7 +429,7 @@ endmodule
 ### **🔧 Why We Need Both Fast and Slow Cells**
 
 **Hold Time Requirements:**
-![Why Slow Cells](Day1/Images/why_slow_cells.png)
+![Why Slow Cells](Day1/Images/slow_cells.png)
 
 **Critical Timing Equation:**
 ```
@@ -450,7 +450,7 @@ T_CLK > T_CQ_A + T_COMBI + T_SETUP_B
 - **Library Collection**: The combination forms the complete .lib file
 
 ### **📚 What is .lib File**
-![What is .lib](Day1/Images/what_is_lib.png)
+![What is .lib](Day1/Images/lib.png)
 
 **Library Characteristics:**
 - **Collection**: Logical modules (AND, OR, NOT gates)
@@ -463,7 +463,7 @@ T_CLK > T_CQ_A + T_COMBI + T_SETUP_B
 ### **🏗️ RTL Design to Synthesis Flow**
 
 **RTL Design Concept:**
-![RTL Design](Day1/Images/rtl_design.png)
+![RTL Design](Day1/Images/rtl.png)
 
 **RTL Characteristics:**
 - **Behavioral Representation**: High-level specification description
@@ -471,7 +471,7 @@ T_CLK > T_CQ_A + T_COMBI + T_SETUP_B
 - **Technology Independent**: No specific library dependencies
 
 **Complete Synthesis Process:**
-![Synthesis Process](Day1/Images/synthesis_process.png)
+![Synthesis Process](Day1/Images/syn.png)
 
 **Synthesis Transformation:**
 - **Input**: RTL behavioral code + Front End LIB

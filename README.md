@@ -169,7 +169,6 @@ ls -la *.vcd
 ```
 VCD info: dumpfile tb_good_mux.vcd opened for output.
 Simulation completed successfully!
--rw-r--r-- 1 user user 2048 tb_good_mux.vcd
 ```
 
 ### **📊 Phase 3: Waveform Intelligence Analysis**
@@ -767,7 +766,7 @@ yosys> show
 yosys> read_verilog mult_2.v
 yosys> synth -top mult_2
 ```
-**Commands**
+**Commands:**
 ![mult_2 Commands](Day2/Images/mult_2_commands.png)
 
 **Synthesis Results:**
@@ -784,7 +783,7 @@ yosys> synth -top mult_2
 **Design Schematic:**
 ![mult_8 Schematic](Day2/Images/mult_8.png)
 
-**Commands**
+**Commands:**
 ![mult_8 Commands](Day2/Images/mult_8_commands.png)
 
 **Generated Netlist:**

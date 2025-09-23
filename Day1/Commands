@@ -1,102 +1,14 @@
-#!/bin/bash
-# ============================================================
-# 📘 Day 1: Introduction to Verilog RTL Design & Synthesis
-# Objective: RTL simulation, waveform analysis, and synthesis
-# ============================================================
+# 🚀 Day 1: Introduction to Verilog RTL Design and Synthesis
 
-# ------------------------------------------------------------
-# Step 1: Repository Setup
-# ------------------------------------------------------------
-# Clone the workshop repository
-git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop
+This session covers:
+- RTL design flow
+- Simulation using Icarus Verilog (iverilog + gtkwave)
+- Logic synthesis using Yosys
+- Technology mapping with Sky130 standard cell libraries
 
-# Enter the project directory
-cd sky130RTLDesignAndSynthesisWorkshop
+---
 
-# List files in the root directory
-ls -la
-
-# Navigate to verilog design files
-cd verilog_files
-
-# Display available design files
-ls
-
-
-# ------------------------------------------------------------
-# Step 2: RTL Simulation Flow
-# ------------------------------------------------------------
-# Compile the Verilog design and its testbench
-iverilog good_mux.v tb_good_mux.v
-
-# Verify executable creation
-ls -la a.out
-
-# Run the simulation
-./a.out
-
-# Check for generated VCD file
-ls -la *.vcd
-
-# Launch GTKWave for waveform analysis
-gtkwave tb_good_mux.vcd &
-
-# Alternative background execution
-gtkwave tb_good_mux.vcd > /dev/null 2>&1 &
-
-
-# ------------------------------------------------------------
-# Step 3: Debugging & Extended Simulation
-# ------------------------------------------------------------
-# Re-compile with warnings enabled
-iverilog -Wall good_mux.v tb_good_mux.v
-
-# Run simulation with verbose output
-./a.out -v
-
-
-# ------------------------------------------------------------
-# Step 4: Synthesis Flow with Yosys
-# ------------------------------------------------------------
-yosys <<EOF
-# Load standard cell library
-read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-
-# Read RTL design
-read_verilog good_mux.v
-
-# Verify design hierarchy
-hierarchy -check -top good_mux
-
-# Perform synthesis to generic gates
-synth -top good_mux
-
-# Map design to Sky130 standard cells
-abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-
-# Display synthesis statistics
-stat
-
-# Generate gate-level netlist
-write_verilog good_mux_netlist.v
-
-# Show schematic
-show
-EOF
-
-
-# ------------------------------------------------------------
-# Step 5: Netlist Simulation & Analysis
-# ------------------------------------------------------------
-# Netlist simulation with functional cell models
-iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 \
-         ../my_lib/verilog_model/primitives.v \
-         ../my_lib/verilog_model/sky130_fd_sc_hd.v \
-         good_mux_netlist.v tb_good_mux.v -o netlist_sim
-
-# View netlist file (choose preferred editor)
-cat good_mux_netlist.v
-# nano good_mux_netlist.v
-# vim good_mux_netlist.v
-# gedit good_mux_netlist.v &
+## 🔧 Step 1: Launch Yosys
+```bash
+yosys
 

@@ -1,14 +1,47 @@
-**🚀 Day 1: Introduction to Verilog RTL Design and Synthesis**
+# 🏗️ RTL Design and Synthesis Workshop
 
-This session covers:
-- RTL design flow
-- Simulation using Icarus Verilog (iverilog + gtkwave)
-- Logic synthesis using Yosys
-- Technology mapping with Sky130 standard cell libraries
+Welcome to the **Sky130 RTL Design and Synthesis Workshop** repository.  
+This repo documents the hands-on flow of Verilog RTL design, simulation, and synthesis using open-source tools like **Icarus Verilog**, **GTKWave**, and **Yosys** with **Sky130 standard cell libraries**.  
 
 ---
 
-## 🔧 Step 1: Launch Yosys
+## 📅 Day 1: Introduction to Verilog RTL Design and Synthesis
+
+### 🎯 Learning Objectives
+- Understand the **RTL design flow** and **simulation methodology**  
+- Explore **Yosys synthesis** flow and technology mapping to Sky130 cells  
+- Verify RTL vs synthesized netlist through **simulation and waveforms**  
+
+---
+
+### 🔧 Tools Used
+- **Icarus Verilog (iverilog)** → Compilation & Simulation  
+- **GTKWave** → Waveform visualization  
+- **Yosys** → Logic synthesis & netlist generation  
+- **Sky130 PDK** → Standard cell library  
+
+---
+
+### 📂 Day 1 Resources
+- Detailed commands & flow: [Day 1 Documentation](docs/Day1_Intro_to_Verilog_Synthesis.md)  
+- Verilog source files: `verilog_files/`  
+- Library files: `my_lib/`  
+
+---
+
+### 🚀 Quick Start (Day 1)
 ```bash
-yosys
+# Clone the repository
+git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop
+cd sky130RTLDesignAndSynthesisWorkshop
+
+# Navigate to Verilog files
+cd verilog_files
+
+# Compile and run simulation
+iverilog good_mux.v tb_good_mux.v
+./a.out
+
+# Open waveform
+gtkwave tb_good_mux.vcd &
 

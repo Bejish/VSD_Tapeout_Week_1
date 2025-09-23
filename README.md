@@ -1,4 +1,4 @@
-<div align="center">
+<img width="952" height="726" alt="image" src="https://github.com/user-attachments/assets/f0841b2b-3715-4de7-a13a-cec6f149139a" /><div align="center">
 
 # ⚡ Verilog RTL Design & Testbench Mastery
 ### *From Logic Dreams to Silicon Reality*
@@ -533,7 +533,7 @@ sky130_fd_sc_hd__tt_025C_1v80.lib
 ### **🧬 Phase 2: Library Content Deep Dive**
 
 **Library Header Analysis:**
-![Library File Header](Image15)
+![Library File Header](Day2/Images/a21110.png)
 
 **🎯 Library Characteristics:**
 ```bash
@@ -543,6 +543,9 @@ cd ~/sky130RTLDesignAndSynthesisWorkshop/my_lib/lib
 # Open library file for analysis
 gvim sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
+
+**Parameters used**
+![Parameters](Day2/Images/parameters_sky130.png)
 
 **Key Library Parameters:**
 - **Technology**: CMOS 130nm process
@@ -586,13 +589,9 @@ gvim sky130_fd_sc_hd__tt_025C_1v80.lib
 
 ### **🎯 Phase 1: Hierarchical Design Analysis**
 
-**Multiple Modules Design:**
-![Multiple Modules Schematic](Day2/multi_module_.png)
-
 **Original Design Structure:**
-![Multiple Modules RTL](Image14)
+![Multiple Modules RTL](Day2/Images/multi_module_verilog_code.png)
 
-**Design Logic:**
 ```verilog
 module multiple_modules (input a, input b, input c, output y);
     wire net1;
@@ -602,6 +601,9 @@ endmodule
 ```
 
 ### **🔧 Phase 2: Hierarchical Synthesis Execution**
+
+**Generated Hierarchical Netlist:**
+![Hierarchical Netlist Code](Day2/Images/multi_module_hier_code.png)
 
 ```bash
 # Launch Yosys for hierarchical synthesis
@@ -618,8 +620,8 @@ yosys> show multiple_modules
 yosys> write_verilog multiple_modules_hier.v
 ```
 
-**Generated Hierarchical Netlist:**
-![Hierarchical Netlist Code](Image13)
+**Generated Hierarchical Design:**
+![Hierarchical Netlist Code](Day2/Images/multi_module_hier.png)
 
 ### **🌊 Phase 3: Flat Synthesis Execution**
 
@@ -631,9 +633,11 @@ yosys> flatten
 yosys> write_verilog multiple_modules_flat.v
 yosys> show
 ```
+**Flat Synthesis Code:**
+![Flat Synthesis Netlist](Day2/Images/multi_module_flatten_code.png)
 
-**Flat Synthesis Result:**
-![Flat Synthesis Netlist](Image4)
+**Flat Synthesis Design:**
+![Flat Synthesis Netlist](Day2/Images/multi_module_flatten.png)
 
 ### **📊 Phase 4: Synthesis Strategy Comparison**
 

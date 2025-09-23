@@ -1,4 +1,3 @@
-<img width="952" height="726" alt="image" src="https://github.com/user-attachments/assets/f0841b2b-3715-4de7-a13a-cec6f149139a" /><div align="center">
 
 # ⚡ Verilog RTL Design & Testbench Mastery
 ### *From Logic Dreams to Silicon Reality*

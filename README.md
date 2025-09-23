@@ -542,7 +542,7 @@ cd ~/sky130RTLDesignAndSynthesisWorkshop/my_lib/lib
 gvim sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
 
-**Parameters used**
+**Parameters:**
 ![Parameters](Day2/Images/parameters_sky130.png)
 
 **Key Library Parameters:**

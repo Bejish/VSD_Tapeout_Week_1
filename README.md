@@ -110,13 +110,6 @@ cd sky130RTLDesignAndSynthesisWorkshop
 ls -la
 ```
 
-**Expected Intelligence:**
-```
-drwxr-xr-x  4 user user 4096 verilog_files/
-drwxr-xr-x  3 user user 4096 my_lib/
--rw-r--r--  1 user user 1234 README.md
-```
-
 ### **📂 Phase 2: Complete Design Arsenal Overview**
 ```bash
 # 📂 Enter the verilog battlefield
@@ -565,7 +558,7 @@ gvim sky130_fd_sc_hd__tt_025C_1v80.lib
 - **T** - **Temperature** (Operating temperature variations)
 
 **Process Corner Impact:**
-![Different AND Gate Flavors](Image3)
+![Different AND Gate Flavors](Day2/Images/and_gates_category.png)
 
 **Cell Variation Analysis:**
 - **Wider Transistors**: ⚡ Faster switching, 🔋 Higher power, 📐 Larger area
@@ -594,7 +587,7 @@ gvim sky130_fd_sc_hd__tt_025C_1v80.lib
 ### **🎯 Phase 1: Hierarchical Design Analysis**
 
 **Multiple Modules Design:**
-![Multiple Modules Schematic](Image12)
+![Multiple Modules Schematic](Day2/multi_module_.png)
 
 **Original Design Structure:**
 ![Multiple Modules RTL](Image14)
@@ -693,10 +686,10 @@ yosys> show
 ### **🔧 Phase 2: D Flip-Flop with Asynchronous Reset**
 
 **Design Schematic:**
-![DFF Async Reset Schematic](Image6)
+![DFF Async Reset Schematic](Day2/Images/asyncres.png)
 
 **Simulation Results:**
-![DFF Async Reset Waveform](Image5)
+![DFF Async Reset Waveform](Day2/Images/asyncres_w.png)
 
 **Key Observations:**
 - Output `q` resets immediately when `async_reset` asserted
@@ -706,10 +699,10 @@ yosys> show
 ### **🔄 Phase 3: D Flip-Flop with Asynchronous Set**
 
 **Design Schematic:**
-![DFF Async Set Schematic](Image4)
+![DFF Async Set Schematic](Day2/Images/async_set.png)
 
 **Simulation Analysis:**
-![DFF Async Set Waveform](Image1)
+![DFF Async Set Waveform](Day2/Images/async_set_w.png)
 
 **Behavioral Differences:**
 - **Asynchronous Set**: Output goes HIGH immediately when `async_set` asserted
@@ -719,10 +712,10 @@ yosys> show
 ### **⏰ Phase 4: D Flip-Flop with Synchronous Reset**
 
 **Design Schematic:**
-![DFF Sync Reset Schematic](Image15)
+![DFF Sync Reset Schematic](Day2/Images/syncres.png)
 
 **Waveform Analysis:**
-![DFF Sync Reset Waveform](Image16)
+![DFF Sync Reset Waveform](Day2/Images/syncres_w.png)
 
 **Synchronous Behavior:**
 - Reset only effective on clock edge
@@ -764,16 +757,18 @@ yosys> show
 ### **✨ Phase 1: mult_2 Optimization**
 
 **Design Schematic:**
-![mult_2 Schematic](Image7)
+![mult_2 Schematic](Day2/Images/mult_2.png)
 
 **Synthesis Surprise:**
 ```bash
 yosys> read_verilog mult_2.v
 yosys> synth -top mult_2
 ```
+**Commands**
+![mult_2 Commands](Day2/Images/mult_2_commands.png)
 
 **Synthesis Results:**
-![mult_2 Synthesis Results](Image2)
+![mult_2 Synthesis Results](Day2/Images/mult2_netlist.png)
 
 **🎯 Key Discovery:**
 - **Zero Gates Used**: No actual gates synthesized!
@@ -784,13 +779,13 @@ yosys> synth -top mult_2
 ### **🔥 Phase 2: mult_8 Optimization**
 
 **Design Schematic:**
-![mult_8 Schematic](Image5)
+![mult_8 Schematic](Day2/Images/mult_8.png)
 
-**Synthesis Analysis:**
-![mult_8 Synthesis Results](Image8)
+**Commands**
+![mult_8 Commands](Day2/Images/mult_8_commands.png)
 
 **Generated Netlist:**
-![mult_8 Netlist](Image10)
+![mult_8 Netlist](Day2/Images/mult_8_netlist.png)
 
 **🎯 Optimization Magic:**
 - **Multiplication by 8**: Left shift by 3 positions

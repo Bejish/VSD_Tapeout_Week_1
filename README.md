@@ -1,4 +1,4 @@
-# 🚀 Advanced Verilog RTL Design & Synthesis Workshop
+# 🚀 Advanced Verilog RTL Design & Synthesis
 ### *Complete Journey from RTL to Gate-Level Mastery*
 
 [![Verilog](https://img.shields.io/badge/Verilog-HDL-blue?style=for-the-badge&logo=v)](https://en.wikipedia.org/wiki/Verilog)
@@ -20,7 +20,7 @@
 
 ---
 
-## 🌟 Workshop Overview
+## 🌟 Course Overview
 
 This comprehensive workshop covers the complete spectrum of RTL design and synthesis, from basic Verilog concepts to advanced optimization techniques. Dive deep into industry-standard tools and methodologies used in modern ASIC design flows.
 
@@ -33,7 +33,7 @@ This comprehensive workshop covers the complete spectrum of RTL design and synth
 
 ---
 
-## 🗓️ **Workshop Journey Map**
+## 🗓️ **Journey Map**
 
 <div align="center">
 
@@ -225,7 +225,7 @@ graph TD
 
 ---
 
-## 🛠️ **Workshop Toolkit**
+## 🛠️ **Course Toolkit**
 
 ### **🔧 Essential Tools**
 | Tool | Purpose | Version |
@@ -245,7 +245,7 @@ graph TD
 
 ## 🎯 **Learning Outcomes**
 
-By completing this workshop, you will have mastered:
+By completing this course, you will have mastered:
 
 ### **🧠 Technical Expertise**
 - **RTL Design Proficiency** - Advanced Verilog coding techniques
@@ -291,15 +291,15 @@ sudo make install
 
 ### **📚 Course Structure**
 ```
-Course/
-├── Day1/           # RTL Foundations
-├── Day2/           # Libraries & Hierarchy  
-├── Day3/           # Optimization Mastery
-├── Day4/           # GLS & Verification
-├── Day5/           # Advanced Synthesis
-├── lib/            # Standard Cell Libraries
-├── verilog_files/  # RTL Source Files
-└── README.md       # This file
+Course
+├── Day1           # RTL Foundations
+├── Day2           # Libraries & Hierarchy  
+├── Day3           # Optimization Mastery
+├── Day4           # GLS & Verification
+├── Day5           # Advanced Synthesis
+├── lib            # Standard Cell Libraries
+├── verilog_files  # RTL Source Files
+└── README.md      # This file
 ```
 
 ---
@@ -332,7 +332,7 @@ Course/
 [![Day 4](https://img.shields.io/badge/⚡-Discover%20Day%204-green?style=for-the-badge&logo=check)](./Day4/)
 [![Day 5](https://img.shields.io/badge/🎯-Master%20Day%205-purple?style=for-the-badge&logo=star)](./Day5/)
 
-### **🎖️ Complete Workshop Status**
+### **🎖️ Complete Course Status**
 [![Progress](https://img.shields.io/badge/Workshop%20Progress-100%25%20Complete-brightgreen?style=for-the-badge)](#)
 
 **🚀 From RTL Concepts to ASIC Implementation - Master the Complete Design Flow! 🚀**

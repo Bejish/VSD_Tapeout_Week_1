@@ -406,7 +406,7 @@ yosys> write_verilog dff_const1_netlist.v
 
   **RETIMING**
   <p align="center">
-   <img src="Images/retiming.png" alt="retiming" width="60%">
+   <img src="Images/retiming.png" alt="retiming" width="40%">
 </p>
 
 **Retiming Example:**

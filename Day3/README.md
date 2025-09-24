@@ -213,12 +213,22 @@ y = a ? (b ? c : (c ? a : 0)) : (!c)
 
 ### **🛠️ Phase 3: Multiple Module Optimization**
 
-**Original Design Structure:**
+**1. multiple_module_opt:**
 <p align="center">
    <img src="Images/multiple_module_opt.png" alt="multiple module opt original" width="60%">
 </p>
 
-**After Optimization with Flatten:**
+**Netlist File**
+<p align="center">
+   <img src="Images/multiple_module_opt_netlist.png" alt="multiple module opt2" width="60%">
+</p>
+
+**2. multiple_module_opt2:**
+<p align="center">
+   <img src="Images/multiple_module_opt2.png" alt="multiple module opt original" width="60%">
+</p>
+
+**Netlist File**
 <p align="center">
    <img src="Images/multiple_module_opt2_netlist.png" alt="multiple module opt2" width="60%">
 </p>
@@ -478,14 +488,14 @@ wire q;
 counter_3bit U1 (.clk(clk), .reset(reset), .count({unused[2:1], q}));
 ```
 
-**Before Optimization:**
+**1. counter_opt:**
 <p align="center">
-   <img src="Images/counter_before_opt.png" alt="counter before optimization" width="70%">
+   <img src="Images/counter_opt.png" alt="counter optimization" width="70%">
 </p>
 
-**After Unused Output Optimization:**
+**1. counter_opt2:**
 <p align="center">
-   <img src="Images/counter_after_opt.png" alt="counter after optimization" width="70%">
+   <img src="Images/counter_opt2.png" alt="counter optimization" width="70%">
 </p>
 
 ### **📊 Phase 3: Optimization Impact Analysis**

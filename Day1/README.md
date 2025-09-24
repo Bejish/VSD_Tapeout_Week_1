@@ -342,7 +342,7 @@ vim good_mux_netlist.v
 
 **🎯 Yosys Generated Netlist:**
 <p align="center">
-   <img src="netlist.png" alt="Yosys Generated Netlist" width="60%">
+   <img src="Images/netlist.png" alt="Yosys Generated Netlist" width="60%">
 </p>
 
 The synthesized netlist reveals:
@@ -414,7 +414,9 @@ endmodule
 - **Design Balance**: Faster cells come at the penalty of area and power consumption
 
 ### **🎛️ Selection of Cells Strategy**
-![Selection of Cells](Day1/Images/selection_cells.png)
+<p align="center">
+   <img src="Images/selection_cells.png" alt="selection_cells" width="60%">
+</p>
 
 **Synthesis Guidance Principles:**
 - **Optimal Implementation**: Guide synthesizer to select the right cell flavour
@@ -425,7 +427,9 @@ endmodule
 ### **🔧 Why We Need Both Fast and Slow Cells**
 
 **Hold Time Requirements:**
-![Why Slow Cells](Day1/Images/slow_cells.png)
+<p align="center">
+   <img src="Images/slow_cells.png" alt="slow_cells" width="60%">
+</p>
 
 **Critical Timing Equation:**
 ```
@@ -433,7 +437,9 @@ T_HOLD_B < T_CQ_A + T_COMBI
 ```
 
 **Setup Time Requirements:**
-![Why Fast Cells](Day1/Images/fast_cells.png)
+<p align="center">
+   <img src="Images/fast_cells.png" alt="fast_cells" width="60%">
+</p>
 
 **Critical Timing Equation:**
 ```
@@ -446,7 +452,9 @@ T_CLK > T_CQ_A + T_COMBI + T_SETUP_B
 - **Library Collection**: The combination forms the complete .lib file
 
 ### **📚 What is .lib File**
-![What is .lib](Day1/Images/lib.png)
+<p align="center">
+   <img src="Images/lib.png" alt="lib" width="60%">
+</p>
 
 **Library Characteristics:**
 - **Collection**: Logical modules (AND, OR, NOT gates)
@@ -459,7 +467,9 @@ T_CLK > T_CQ_A + T_COMBI + T_SETUP_B
 ### **🏗️ RTL Design to Synthesis Flow**
 
 **RTL Design Concept:**
-![RTL Design](Day1/Images/rtl.png)
+<p align="center">
+   <img src="Images/rtl.png" alt="rtl" width="60%">
+</p>
 
 **RTL Characteristics:**
 - **Behavioral Representation**: High-level specification description
@@ -467,7 +477,9 @@ T_CLK > T_CQ_A + T_COMBI + T_SETUP_B
 - **Technology Independent**: No specific library dependencies
 
 **Complete Synthesis Process:**
-![Synthesis Process](Day1/Images/syn.png)
+<p align="center">
+   <img src="Images/syn.png" alt="syn" width="60%">
+</p>
 
 **Synthesis Transformation:**
 - **Input**: RTL behavioral code + Front End LIB

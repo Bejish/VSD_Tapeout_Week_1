@@ -383,6 +383,10 @@ yosys> write_verilog dff_const1_netlist.v
 - **State Encoding**: Efficient state representation
 - **State Minimization**: Reduce state machine complexity
 
+  <p align="center">
+   <img src="Images/state_optimization.png" alt="state_optimization" width="60%">
+</p>
+
 **Example: State Machine with Unused States**
 ```verilog
 // Original state machine with 8 states
@@ -399,6 +403,11 @@ yosys> write_verilog dff_const1_netlist.v
 - **Register Movement**: Relocate flip-flops for timing
 - **Critical Path Optimization**: Break long combinational paths
 - **Performance Improvement**: Increase maximum frequency
+
+  **RETIMING**
+  <p align="center">
+   <img src="Images/retiming.png" alt="retiming" width="60%">
+</p>
 
 **Retiming Example:**
 ```
@@ -420,6 +429,11 @@ Input → FF → Shorter Logic → FF → Output
 - **Logic Duplication**: Replicate logic for timing
 - **Load Distribution**: Reduce fanout on critical signals
 - **Timing Closure**: Meet setup/hold requirements
+
+<p align="center">
+   <img src="Images/cloning.png" alt="cloning" width="60%">
+</p>
+
 
 **Cloning Scenario:**
 ```

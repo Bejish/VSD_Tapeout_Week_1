@@ -384,7 +384,7 @@ yosys> write_verilog dff_const1_netlist.v
 - **State Minimization**: Reduce state machine complexity
 
   <p align="center">
-   <img src="Images/state_optimization.png" alt="state_optimization" width="60%">
+   <img src="Images/state_optimization.png" alt="state_optimization" width="20%">
 </p>
 
 **Example: State Machine with Unused States**
@@ -406,7 +406,7 @@ yosys> write_verilog dff_const1_netlist.v
 
   **RETIMING**
   <p align="center">
-   <img src="Images/retiming.png" alt="retiming" width="40%">
+   <img src="Images/retiming.png" alt="retiming" width="20%">
 </p>
 
 **Retiming Example:**
@@ -431,7 +431,7 @@ Input → FF → Shorter Logic → FF → Output
 - **Timing Closure**: Meet setup/hold requirements
 
 <p align="center">
-   <img src="Images/cloning.png" alt="cloning" width="60%">
+   <img src="Images/cloning.png" alt="cloning" width="20%">
 </p>
 
 

@@ -283,10 +283,14 @@ yosys> show
 ### **🔧 Phase 2: D Flip-Flop with Asynchronous Reset**
 
 **Design Schematic:**
-![DFF Async Reset Schematic](Day2/Images/asyncres.png)
+<p align="center">
+   <img src="Images/asyncres.png" alt="asyncres" width="60%">
+</p>
 
 **Simulation Results:**
-![DFF Async Reset Waveform](Day2/Images/asyncres_w.png)
+<p align="center">
+   <img src="Images/asyncres_w.png" alt="asyncres_w" width="60%">
+</p>
 
 **Key Observations:**
 - Output `q` resets immediately when `async_reset` asserted
@@ -296,10 +300,14 @@ yosys> show
 ### **🔄 Phase 3: D Flip-Flop with Asynchronous Set**
 
 **Design Schematic:**
-![DFF Async Set Schematic](Day2/Images/async_set.png)
+<p align="center">
+   <img src="Images/async_set.png" alt="async_set" width="60%">
+</p>
 
 **Simulation Analysis:**
-![DFF Async Set Waveform](Day2/Images/async_set_w.png)
+<p align="center">
+   <img src="Images/async_set_w.png" alt="async_set_w" width="60%">
+</p>
 
 **Behavioral Differences:**
 - **Asynchronous Set**: Output goes HIGH immediately when `async_set` asserted
@@ -309,10 +317,15 @@ yosys> show
 ### **⏰ Phase 4: D Flip-Flop with Synchronous Reset**
 
 **Design Schematic:**
-![DFF Sync Reset Schematic](Day2/Images/syncres.png)
+<p align="center">
+   <img src="Images/syncres.png" alt="syncres" width="60%">
+</p>
 
 **Waveform Analysis:**
-![DFF Sync Reset Waveform](Day2/Images/syncres_w.png)
+<p align="center">
+   <img src="Images/syncres_w.png" alt="syncres_w" width="60%">
+</p>
+
 
 **Synchronous Behavior:**
 - Reset only effective on clock edge
@@ -354,7 +367,10 @@ yosys> show
 ### **✨ Phase 1: mult_2 Optimization**
 
 **Design Schematic:**
-![mult_2 Schematic](Day2/Images/mult_2.png)
+<p align="center">
+   <img src="Images/mult_2.png" alt="mult_2" width="60%">
+</p>
+
 
 **Synthesis Surprise:**
 ```bash
@@ -362,10 +378,14 @@ yosys> read_verilog mult_2.v
 yosys> synth -top mult_2
 ```
 **Commands:**
-![mult_2 Commands](Day2/Images/mult_2_commands.png)
+<p align="center">
+   <img src="Images/mult_2_commands.png" alt="mult_2_commands" width="60%">
+</p>
 
 **Synthesis Results:**
-![mult_2 Synthesis Results](Day2/Images/mult2_netlist.png)
+<p align="center">
+   <img src="Images/mult2_netlist.png" alt="mult2_netlist" width="60%">
+</p>
 
 **🎯 Key Discovery:**
 - **Zero Gates Used**: No actual gates synthesized!
@@ -376,13 +396,20 @@ yosys> synth -top mult_2
 ### **🔥 Phase 2: mult_8 Optimization**
 
 **Design Schematic:**
-![mult_8 Schematic](Day2/Images/mult_8.png)
+<p align="center">
+   <img src="Images/mult_8.png" alt="mult_8" width="60%">
+</p>
 
 **Commands:**
-![mult_8 Commands](Day2/Images/mult_8_commands.png)
+<p align="center">
+   <img src="Images/mult_8_commands.png" alt="mult_8_commands" width="60%">
+</p>
 
 **Generated Netlist:**
-![mult_8 Netlist](Day2/Images/mult_8_netlist.png)
+<p align="center">
+   <img src="Images/mult_8_netlist.png" alt="mult_8_netlist" width="60%">
+</p>
+
 
 **🎯 Optimization Magic:**
 - **Multiplication by 8**: Left shift by 3 positions

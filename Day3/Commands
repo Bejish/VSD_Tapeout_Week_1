@@ -1,1 +1,46 @@
+🔧 Combinational Optimization Commands
+# Basic combinational optimization
+yosys> read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> read_verilog opt_check.v
+yosys> synth -top opt_check
 
+# Apply combinational optimizations
+yosys> opt_clean -purge
+yosys> abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> show
+yosys> write_verilog opt_check_netlist.v
+🔧 Sequential Optimization Commands
+# Sequential logic optimization with DFF mapping
+yosys> read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> read_verilog dff_const.v
+yosys> synth -top dff_const
+
+# CRITICAL: Sequential library mapping
+yosys> dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# Apply optimizations
+yosys> opt_clean -purge
+yosys> abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> show
+🔧 Multiple Module Optimization Commands
+# Hierarchical optimization
+yosys> read_verilog multiple_modules_opt.v
+yosys> synth -top multiple_modules_opt
+
+# Flatten for global optimization
+yosys> flatten
+
+# Clean and optimize
+yosys> opt_clean -purge
+yosys> abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+🔧 Unused Output Optimization Commands
+# Counter optimization
+yosys> read_verilog counter_opt.v
+yosys> synth -top counter_opt
+
+# Automatic unused logic removal
+yosys> opt_clean -purge
+
+# Sequential mapping
+yosys> dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib

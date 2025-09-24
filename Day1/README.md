@@ -114,7 +114,7 @@ ls
 
 **🎯 Complete Design Library Visualization:**
 <p align="center">
-   <img src="files_directory.png" alt="GTKWave Counter Output" width="60%">
+   <img src="Images/files_directory.png" alt="files_directory" width="60%">
 </p>
 
 **🎯 Key Files Discovered:**
@@ -226,7 +226,9 @@ endmodule
 ### **📊 Waveform Viewer Analysis**
 
 **🌊 GTKWave Interface Overview:**
-![GTKWave Simulation Results](Day1/Images/gtk_waveform.png)
+<p align="center">
+   <img src="Images/gtk_waveform.png" alt="gtk_waveform" width="60%">
+</p>
 
 **Key Observations from Waveform:**
 - **🎯 Signal Structure**: All 4 signals (i0, i1, sel, y) clearly visible
@@ -339,7 +341,9 @@ vim good_mux_netlist.v
 ### **📊 Generated Netlist Analysis**
 
 **🎯 Yosys Generated Netlist:**
-![Yosys Generated Netlist](Day1/Images/netlist.png)
+<p align="center">
+   <img src="netlist.png" alt="Yosys Generated Netlist" width="60%">
+</p>
 
 The synthesized netlist reveals:
 
@@ -372,7 +376,9 @@ endmodule
 ```
 
 **🌊 Synthesized Schematic View:**
-![Synthesis Schematic](Day1/Images/logic_synthesizer.png)
+<p align="center">
+   <img src="Images/logic_synthesizer.png" alt="logic_synthesizer" width="60%">
+</p>
 
 ### **🧬 Phase 6: Technology Mapping Analysis**
 
@@ -397,7 +403,9 @@ endmodule
 ### **⚡ Understanding Cell Selection Strategy**
 
 **🎯 Faster Cells vs Slower Cells Trade-offs:**
-![Faster vs Slower Cells](Day1/Images/fastervsslower.png)
+<p align="center">
+   <img src="Images/fastervsslower.png" alt="fastervsslower" width="60%">
+</p>
 
 **Key Insights:**
 - **Load in Digital Logic**: Every connection represents capacitance

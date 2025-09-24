@@ -153,12 +153,12 @@ y = a ? (b ? c : (c ? a : 0)) : (!c)
 
 **opt_check1: Basic Optimization**
 <p align="center">
-   <img src="Images/opt_check1.png" alt="opt_check1 synthesis" width="60%">
+   <img src="Images/opt_check.png" alt="opt_check1 synthesis" width="60%">
 </p>
 
 **Synthesis Result:**
 <p align="center">
-   <img src="Images/opt_check1_netlist.png" alt="opt_check1 netlist" width="60%">
+   <img src="Images/opt_check_netlist.png" alt="opt_check1 netlist" width="60%">
 </p>
 
 **Key Observations:**
@@ -215,7 +215,7 @@ y = a ? (b ? c : (c ? a : 0)) : (!c)
 
 **Original Design Structure:**
 <p align="center">
-   <img src="Images/multiple_module_opt_original.png" alt="multiple module opt original" width="60%">
+   <img src="Images/multiple_module_opt.png" alt="multiple module opt original" width="60%">
 </p>
 
 **After Optimization with Flatten:**
@@ -280,7 +280,7 @@ yosys> write_verilog multiple_modules_opt_flat.v
 
 **Simulation Waveform:**
 <p align="center">
-   <img src="Images/dff_const1_wave.png" alt="dff const1 wave" width="60%">
+   <img src="Images/dff_const1_w.png" alt="dff const1 wave" width="60%">
 </p>
 
 **Key Observations:**
@@ -295,7 +295,7 @@ yosys> write_verilog multiple_modules_opt_flat.v
 
 **Waveform Analysis:**
 <p align="center">
-   <img src="Images/dff_const2_wave.png" alt="dff const2 wave" width="60%">
+   <img src="Images/dff_const2_w.png" alt="dff const2 wave" width="60%">
 </p>
 
 **Behavior Analysis:**
@@ -310,7 +310,27 @@ yosys> write_verilog multiple_modules_opt_flat.v
 
 **Advanced Waveform:**
 <p align="center">
-   <img src="Images/dff_const3_wave.png" alt="dff const3 wave" width="60%">
+   <img src="Images/dff_const3_w.png" alt="dff const3 wave" width="60%">
+</p>
+
+**dff_const4: Complex Sequential Logic**
+<p align="center">
+   <img src="Images/dff_const4.png" alt="dff const4" width="60%">
+</p>
+
+**Advanced Waveform:**
+<p align="center">
+   <img src="Images/dff_const4_w.png" alt="dff const4 wave" width="60%">
+</p>
+
+**dff_const5: Complex Sequential Logic**
+<p align="center">
+   <img src="Images/dff_const5.png" alt="dff const5" width="60%">
+</p>
+
+**Advanced Waveform:**
+<p align="center">
+   <img src="Images/dff_const5_w.png" alt="dff const5 wave" width="60%">
 </p>
 
 **Complex Analysis:**

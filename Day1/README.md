@@ -113,7 +113,9 @@ ls
 ```
 
 **🎯 Complete Design Library Visualization:**
-![Verilog Files Directory](Day1/Images/files_directory.png)
+<p align="center">
+   <img src="files_directory.png" alt="GTKWave Counter Output" width="60%">
+</p>
 
 **🎯 Key Files Discovered:**
 - ✅ `good_mux.v` - Perfect 2:1 Multiplexer implementation

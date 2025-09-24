@@ -228,12 +228,12 @@ graph TD
 ## 🛠️ **Workshop Toolkit**
 
 ### **🔧 Essential Tools**
-| Tool | Purpose | Version | Documentation |
-|------|---------|---------|---------------|
-| **iVerilog** | Verilog Simulation | Latest | [📖 Docs](http://iverilog.icarus.com/) |
-| **GTKWave** | Waveform Viewer | Latest | [📖 Docs](http://gtkwave.sourceforge.net/) |
-| **Yosys** | Logic Synthesis | 0.9+ | [📖 Docs](http://www.clifford.at/yosys/) |
-| **Sky130 PDK** | Process Design Kit | Latest | [📖 Docs](https://github.com/google/skywater-pdk) |
+| Tool | Purpose | Version |
+|------|---------|---------|
+| **iVerilog** | Verilog Simulation | Latest |
+| **GTKWave** | Waveform Viewer | Latest |
+| **Yosys** | Logic Synthesis | 0.9+ |
+| **Sky130 PDK** | Process Design Kit | Latest |
 
 ### **📚 Key Libraries**
 - **sky130_fd_sc_hd** - High Density Standard Cells
@@ -289,9 +289,9 @@ make -j$(nproc)
 sudo make install
 ```
 
-### **📚 Workshop Structure**
+### **📚 Course Structure**
 ```
-workshop/
+Course/
 ├── Day1/           # RTL Foundations
 ├── Day2/           # Libraries & Hierarchy  
 ├── Day3/           # Optimization Mastery
@@ -304,67 +304,12 @@ workshop/
 
 ---
 
-## 📊 **Workshop Statistics**
-
-### **📈 Coverage Metrics**
-| Category | Labs Completed | Concepts Covered | Tools Mastered |
-|----------|----------------|------------------|----------------|
-| **RTL Design** | 15+ | 25+ | 4 |
-| **Synthesis** | 20+ | 30+ | 3 |
-| **Optimization** | 12+ | 20+ | 2 |
-| **Verification** | 10+ | 15+ | 3 |
-| **Advanced Topics** | 8+ | 12+ | 2 |
-
 ### **🎯 Skill Development**
 - **Beginner → Intermediate**: Days 1-2
 - **Intermediate → Advanced**: Days 3-4  
 - **Advanced → Expert**: Day 5
 
 ---
-
-## 🏆 **Workshop Achievements**
-
-### **✅ Completion Badges**
-
-<div align="center">
-
-[![RTL Master](https://img.shields.io/badge/🚀-RTL%20Master-red?style=for-the-badge)](#)
-[![Synthesis Expert](https://img.shields.io/badge/⚙️-Synthesis%20Expert-orange?style=for-the-badge)](#)
-[![Optimization Guru](https://img.shields.io/badge/🔧-Optimization%20Guru-yellow?style=for-the-badge)](#)
-[![Verification Pro](https://img.shields.io/badge/⚡-Verification%20Pro-green?style=for-the-badge)](#)
-[![ASIC Designer](https://img.shields.io/badge/🎯-ASIC%20Designer-purple?style=for-the-badge)](#)
-
-</div>
-
-### **🎖️ Certification Levels**
-- **🥉 Bronze**: Complete Days 1-2 (Foundation Level)
-- **🥈 Silver**: Complete Days 1-3 (Intermediate Level)
-- **🥇 Gold**: Complete Days 1-4 (Advanced Level)
-- **💎 Platinum**: Complete All Days (Expert Level)
-
----
-
-## 🤝 **Community & Support**
-
-### **📞 Getting Help**
-- **Issues**: Open GitHub issues for technical problems
-- **Discussions**: Use GitHub discussions for questions
-- **Documentation**: Each day has comprehensive README files
-- **Examples**: Extensive code examples provided
-
-### **🌟 Contributing**
-Contributions are welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Add your improvements
-4. Submit a pull request
-
----
-
-## 📝 **License & Acknowledgments**
-
-### **📄 License**
-This workshop is provided under the [MIT License](LICENSE).
 
 ### **🙏 Acknowledgments**
 - **SkyWater Technology** - Sky130 PDK

@@ -1,162 +1,17 @@
-🚀 Day 1: Introduction to Verilog RTL Design and Synthesis
-
-This session introduces:
-
-RTL design flow
-
-Simulation using Icarus Verilog (iverilog + gtkwave)
-
-Logic synthesis using Yosys
-
-Technology mapping with Sky130 standard cell libraries
-
-Yosys Synthesis Flow
-
-Launch Yosys
-
-yosys
-
-
-Verify Yosys version and capabilities
-
-yosys> help
-
-
-Load the standard cell library
-
-yosys> read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-
-
-Read the RTL design
-
-yosys> read_verilog good_mux.v
-
-
-Verify design hierarchy
-
-yosys> hierarchy -check -top good_mux
-
-
-Perform synthesis to generic gates
-
-yosys> synth -top good_mux
-
-
-Technology mapping to Sky130 cells
-
-yosys> abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-
-
-Display synthesis statistics
-
-yosys> stat
-
-
-Generate the gate-level netlist
-
-yosys> write_verilog good_mux_netlist.v
-
-
-Display schematic view
-
-yosys> show
-
-
-Exit synthesis environment
-
-yosys> exit
-
-Simulation Flow
-
-Compile simulation executable
-
-iverilog good_mux.v tb_good_mux.v
-
-
-Verify executable creation
-
-ls -la a.out
-
-
-Run the simulation
-
-./a.out
-
-
-Verify VCD file generation
-
-ls -la *.vcd
-
-
-Open waveform in GTKWave
-
-gtkwave tb_good_mux.vcd &
-
-
-Alternative (background execution):
-
-gtkwave tb_good_mux.vcd > /dev/null 2>&1 &
-
-Repository and File Setup
-
-Clone the design repository
-
+# Environment Setup
 git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop
+cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
 
+# Simulation Flow
+iverilog design.v testbench.v
+./a.out
+gtkwave design.vcd
 
-Navigate to project directory
-
-cd sky130RTLDesignAndSynthesisWorkshop
-
-
-List contents
-
-ls -la
-
-
-Enter Verilog design files folder
-
-cd verilog_files
-
-
-Display all Verilog files
-
-ls
-
-Debugging and Netlist Simulation
-
-Compilation with warnings
-
-iverilog -Wall good_mux.v tb_good_mux.v
-
-
-Detailed simulation run
-
-./a.out -v
-
-
-Run synthesis via script
-
-yosys -s synthesis_script.ys
-
-
-Netlist simulation
-
-iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 \
-         ../my_lib/verilog_model/primitives.v \
-         ../my_lib/verilog_model/sky130_fd_sc_hd.v \
-         good_mux_netlist.v tb_good_mux.v -o netlist_sim
-
-
-View generated netlist
-
-gedit good_mux_netlist.v &
-# or
-cat good_mux_netlist.v
-# or
-nano good_mux_netlist.v
-# or
-vim good_mux_netlist.v
-
-
-✅ End of Day 1 – RTL Design and Synthesis Workflow
+# Basic Synthesis
+yosys
+read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog design.v
+synth -top design
+abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+write_verilog design_netlist.v

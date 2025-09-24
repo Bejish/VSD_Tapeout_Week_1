@@ -1,1 +1,50 @@
+🔧 Library Analysis Commands
+# Library file exploration
+cd ~/sky130RTLDesignAndSynthesisWorkshop/my_lib/lib
+gvim sky130_fd_sc_hd__tt_025C_1v80.lib
 
+# Search for specific cells
+grep -n "cell.*and" sky130_fd_sc_hd__tt_025C_1v80.lib
+🔧 Hierarchical Synthesis Commands
+# Hierarchical synthesis flow
+yosys
+read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog multiple_modules.v
+synth -top multiple_modules
+abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog multiple_modules_hier.v
+
+# Flat synthesis flow
+flatten
+write_verilog multiple_modules_flat.v
+
+# Submodule synthesis
+synth -top sub_module1
+abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+🔧 Sequential Logic Synthesis Commands
+# Standard DFF synthesis
+yosys
+read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_async_reset.v
+synth -top dff_async_reset
+
+# CRITICAL: DFF library mapping
+dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+write_verilog dff_async_reset_netlist.v
+🔧 Simulation Commands for Flops
+# Simulate DFF designs
+iverilog dff_async_reset.v tb_dff_async_reset.v
+./a.out
+gtkwave tb_dff_async_reset.vcd
+
+# Simulate different DFF types
+iverilog dff_async_set.v tb_dff_async_set.v
+./a.out
+gtkwave tb_dff_async_set.vcd
+
+iverilog dff_sync_reset.v tb_dff_sync_reset.v
+./a.out
+gtkwave tb_dff_sync_reset.vcd

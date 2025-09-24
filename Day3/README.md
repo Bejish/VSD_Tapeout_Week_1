@@ -218,7 +218,7 @@ y = a ? (b ? c : (c ? a : 0)) : (!c)
    <img src="Images/multiple_module_opt.png" alt="multiple module opt original" width="60%">
 </p>
 
-**Netlist File**
+**Netlist File:**
 <p align="center">
    <img src="Images/multiple_module_opt_netlist1.png" alt="multiple module opt2" width="60%">
 </p>
@@ -228,7 +228,7 @@ y = a ? (b ? c : (c ? a : 0)) : (!c)
    <img src="Images/multiple_module_opt2.png" alt="multiple module opt original" width="60%">
 </p>
 
-**Netlist File**
+**Netlist File:**
 <p align="center">
    <img src="Images/multiple_module_opt2_netlist.png" alt="multiple module opt2" width="60%">
 </p>

@@ -110,7 +110,9 @@ sky130_fd_sc_hd__tt_025C_1v80.lib
 ### **🧬 Phase 2: Library Content Deep Dive**
 
 **Library Header Analysis:**
-![Library File Header](Day2/Images/a21110.png)
+<p align="center">
+   <img src="Images/a21110.png" alt="a21110" width="60%">
+</p>
 
 **🎯 Library Characteristics:**
 ```bash
@@ -122,7 +124,9 @@ gvim sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
 
 **Parameters:**
-![Parameters](Day2/Images/parameters_sky130.png)
+<p align="center">
+   <img src="Images/parameters_sky130.png" alt="files_directory" width="60%">
+</p>
 
 **Key Library Parameters:**
 - **Technology**: CMOS 130nm process
@@ -138,7 +142,9 @@ gvim sky130_fd_sc_hd__tt_025C_1v80.lib
 - **T** - **Temperature** (Operating temperature variations)
 
 **Process Corner Impact:**
-![Different AND Gate Flavors](Day2/Images/and_gates_category.png)
+<p align="center">
+   <img src="Images/and_gates_category.png" alt="and_gates_category" width="60%">
+</p>
 
 **Cell Variation Analysis:**
 - **Wider Transistors**: ⚡ Faster switching, 🔋 Higher power, 📐 Larger area
@@ -167,7 +173,9 @@ gvim sky130_fd_sc_hd__tt_025C_1v80.lib
 ### **🎯 Phase 1: Hierarchical Design Analysis**
 
 **Original Design Structure:**
-![Multiple Modules RTL](Day2/Images/multi_module_verilog_code.png)
+<p align="center">
+   <img src="Images/multi_module_verilog_code.png" alt="multi_module_verilog_code" width="60%">
+</p>
 
 ```verilog
 module multiple_modules (input a, input b, input c, output y);
@@ -180,7 +188,9 @@ endmodule
 ### **🔧 Phase 2: Hierarchical Synthesis Execution**
 
 **Generated Hierarchical Netlist:**
-![Hierarchical Netlist Code](Day2/Images/multi_module_hier_code.png)
+<p align="center">
+   <img src="Images/multi_module_hier_code.png" alt="multi_module_hier_code" width="60%">
+</p>
 
 ```bash
 # Launch Yosys for hierarchical synthesis
@@ -198,7 +208,9 @@ yosys> write_verilog multiple_modules_hier.v
 ```
 
 **Generated Hierarchical Design:**
-![Hierarchical Netlist Code](Day2/Images/multi_module_hier.png)
+<p align="center">
+   <img src="Images/multi_module_hier.png" alt="multi_module_hier" width="60%">
+</p>
 
 ### **🌊 Phase 3: Flat Synthesis Execution**
 
@@ -211,10 +223,14 @@ yosys> write_verilog multiple_modules_flat.v
 yosys> show
 ```
 **Flat Synthesis Code:**
-![Flat Synthesis Netlist](Day2/Images/multi_module_flatten_code.png)
+<p align="center">
+   <img src="Images/multi_module_flatten_code.png" alt="multi_module_flatten_code" width="60%">
+</p>
 
 **Flat Synthesis Design:**
-![Flat Synthesis Netlist](Day2/Images/multi_module_flatten.png)
+<p align="center">
+   <img src="Images/multi_module_flatten.png" alt="multi_module_flatten" width="60%">
+</p>
 
 ### **📊 Phase 4: Synthesis Strategy Comparison**
 

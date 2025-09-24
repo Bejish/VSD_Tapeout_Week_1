@@ -220,7 +220,7 @@ y = a ? (b ? c : (c ? a : 0)) : (!c)
 
 **Netlist File**
 <p align="center">
-   <img src="Images/multiple_module_opt_netlist.png" alt="multiple module opt2" width="60%">
+   <img src="Images/multiple_module_opt_netlist1.png" alt="multiple module opt2" width="60%">
 </p>
 
 **2. multiple_module_opt2:**

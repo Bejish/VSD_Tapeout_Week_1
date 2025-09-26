@@ -177,21 +177,24 @@ graph TD
 </div>
 
 **🎯 Learning Objectives:**
-- **GLS, Synthesis-Simulation Mismatch and Blocking/Non-blocking Statements**
+- **Introduction to Gate-Level Simulation (GLS)**
+- **GLS using iVerilog and GTKWave**
+- **Synthesis-Simulation Mismatch Analysis**
+- **Missing Sensitivity List and Blocking Assignment Issues**
 - **Labs on GLS and Synthesis-Simulation Mismatch**
-- **Labs on Synth-Sim Mismatch for Blocking Statement**
 
-**🔍 Critical Concepts:**
-- Gate-level simulation methodology
-- Synthesis-simulation mismatch detection
-- Blocking vs non-blocking statement implications
-- Design verification strategies
+**🔬 Deep Dive Topics:**
+- Gate-level simulation workflow and methodology
+- Post-synthesis verification techniques
+- Root cause analysis of synthesis-simulation mismatches
+- Blocking vs non-blocking assignment implications
+- Professional debugging and resolution strategies
 
 **🏆 Key Achievements:**
-- ✅ GLS flow mastery
-- ✅ Mismatch debugging techniques
-- ✅ Blocking statement analysis
-- ✅ Verification methodology
+- ✅ Complete GLS verification flow
+- ✅ Expert mismatch debugging techniques
+- ✅ Blocking vs non-blocking mastery
+- ✅ Professional verification methodology
 
 ---
 

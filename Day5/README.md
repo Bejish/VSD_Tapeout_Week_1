@@ -322,6 +322,11 @@ endmodule
    <img src="Images/bad_case_w.png" alt="bad case simulation" width="70%">
 </p>
 
+**Gate Level Simulation Results:**
+<p align="center">
+   <img src="Images/bad_case_gls.png" alt="bad case simulation" width="70%">
+</p>
+
 **Critical Issues:**
 - **Synthesis Ambiguity**: Tool must resolve conflicting assignments
 - **Simulation vs Synthesis**: Different behavior possible
@@ -449,6 +454,11 @@ endmodule
    <img src="Images/demux_case_w.png" alt="demux case simulation" width="70%">
 </p>
 
+**Gate Level Simulation Results:**
+<p align="center">
+   <img src="Images/demux_case_gls.png" alt="demux case simulation" width="70%">
+</p>
+
 **Key Design Points:**
 - **Initialization**: All outputs initialized to 0 to prevent latches
 - **Case Logic**: Clean decode logic for each select value
@@ -486,6 +496,12 @@ endmodule
 <p align="center">
    <img src="Images/demux_generate_w.png" alt="demux generate simulation" width="70%">
 </p>
+
+**Gate Level Simulation Results:**
+<p align="center">
+   <img src="Images/demux_generate_gls.png" alt="demux generate simulation" width="70%">
+</p>
+
 
 **Generate Advantages:**
 - **Scalability**: Easy to modify for different widths
@@ -525,6 +541,11 @@ endmodule
 **Simulation Results:**
 <p align="center">
    <img src="Images/rca_w.png" alt="ripple carry adder simulation" width="70%">
+</p>
+
+**Gate Level Simulation Results:**
+<p align="center">
+   <img src="Images/rca_gls.png" alt="ripple carry adder simulation" width="70%">
 </p>
 
 **RCA Design Insights:**

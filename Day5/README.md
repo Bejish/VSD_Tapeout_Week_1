@@ -157,12 +157,12 @@ This usually indicates incomplete case/if statements
 
 **incomp_if Design:**
 ```verilog
-module incomp_if (input i0, i1, i2, output reg y);
-    always @(*) begin
-        if (i0)
-            y = i1;
-        // Missing else - LATCH INFERRED
-    end
+module incomp_if (input i0 , input i1 , input i2 , output reg y);
+always @ (*)
+begin
+	if(i0)
+		y <= i1;
+end
 endmodule
 ```
 
@@ -186,14 +186,15 @@ endmodule
 
 **incomp_if2 Design:**
 ```verilog
-module incomp_if2 (input i0, i1, i2, i3, output reg y);
-    always @(*) begin
-        if (i0)
-            y = i1;
-        else if (i2)
-            y = i3;
-        // Missing final else - LATCH INFERRED
-    end
+module incomp_if2 (input i0 , input i1 , input i2 , input i3, output reg y);
+always @ (*)
+begin
+	if(i0)
+		y <= i1;
+	else if (i2)
+		y <= i3;
+
+end
 endmodule
 ```
 
@@ -229,14 +230,14 @@ endmodule
 
 **The Problem with Incomplete Case:**
 ```verilog
-module incomplete_case (input [1:0] sel, input i0, i1, i2, output reg y);
-    always @(*) begin
-        case(sel)
-            2'b00: y = i0;
-            2'b01: y = i1;
-            // Missing 2'b10 and 2'b11 cases - LATCH INFERRED
-        endcase
-    end
+module incomp_case (input i0 , input i1 , input i2 , input [1:0] sel, output reg y);
+always @ (*)
+begin
+	case(sel)
+		2'b00 : y = i0;
+		2'b01 : y = i1;
+	endcase
+end
 endmodule
 ```
 
@@ -261,15 +262,15 @@ endmodule
 
 **The Solution - Complete Case with Default:**
 ```verilog
-module comp_case (input [1:0] sel, input i0, i1, i2, output reg y);
-    always @(*) begin
-        case(sel)
-            2'b00: y = i0;
-            2'b01: y = i1;
-            2'b10: y = i2;
-            default: y = i0;  // CRITICAL: Default prevents latches
-        endcase
-    end
+module comp_case (input i0 , input i1 , input i2 , input [1:0] sel, output reg y);
+always @ (*)
+begin
+	case(sel)
+		2'b00 : y = i0;
+		2'b01 : y = i1;
+		default : y = i2;
+	endcase
+end
 endmodule
 ```
 
@@ -294,15 +295,18 @@ endmodule
 
 **The Overlapping Case Problem:**
 ```verilog
-module bad_case (input [1:0] sel, input i0, i1, i2, i3, output reg y);
-    always @(*) begin
-        case(sel)
-            2'b00: y = i0;
-            2'b01: y = i1;
-            2'b10: y = i2;
-            2'b1?: y = i3;  // OVERLAPPING with 2'b10 and 2'b11
-        endcase
-    end
+module bad_case (input i0 , input i1, input i2, input i3 , input [1:0] sel, output reg y);
+always @(*)
+begin
+	case(sel)
+		2'b00: y = i0;
+		2'b01: y = i1;
+		2'b10: y = i2;
+		2'b1?: y = i3;
+		//2'b11: y = i3;
+	endcase
+end
+
 endmodule
 ```
 
@@ -454,14 +458,21 @@ endmodule
 
 **demux_generate Design - Generate Approach:**
 ```verilog
-module demux_generate (input i, input [2:0] sel, output [7:0] y);
-    genvar k;
-    generate
-        for (k = 0; k < 8; k = k + 1) begin : demux_inst
-            assign y[k] = (sel == k) ? i : 1'b0;
-        end
-    endgenerate
+
+module demux_generate (output o0 , output o1, output o2 , output o3, output o4, output o5, output o6 , output o7 , input [2:0] sel  , input i);
+reg [7:0]y_int;
+assign {o7,o6,o5,o4,o3,o2,o1,o0} = y_int;
+integer k;
+always @ (*)
+begin
+y_int = 8'b0;
+for(k = 0; k < 8; k++) begin
+	if(k == sel)
+		y_int[k] = i;
+end
+end
 endmodule
+
 ```
 
 **DEMUX Generate Analysis:**
@@ -485,26 +496,22 @@ endmodule
 
 **RCA Design with Generate:**
 ```verilog
-module rca (input [7:0] num1, input [7:0] num2, output [8:0] sum);
-    wire [7:0] int_sum;
-    wire [8:0] int_co;
-    
-    genvar i;
-    assign int_co[0] = 1'b0;
-    
-    generate
-        for (i = 0; i < 8; i = i + 1) begin : rca_inst
-            fa u_fa (.a(num1[i]), .b(num2[i]), .cin(int_co[i]), 
-                    .sum(int_sum[i]), .cout(int_co[i+1]));
-        end
-    endgenerate
-    
-    assign sum = {int_co[8], int_sum};
-endmodule
+module rca (input [7:0] num1 , input [7:0] num2 , output [8:0] sum);
+wire [7:0] int_sum;
+wire [7:0]int_co;
 
-module fa (input a, b, cin, output sum, cout);
-    assign sum = a ^ b ^ cin;
-    assign cout = (a & b) | (b & cin) | (a & cin);
+genvar i;
+generate
+	for (i = 1 ; i < 8; i=i+1) begin
+		fa u_fa_1 (.a(num1[i]),.b(num2[i]),.c(int_co[i-1]),.co(int_co[i]),.sum(int_sum[i]));
+	end
+
+endgenerate
+fa u_fa_0 (.a(num1[0]),.b(num2[0]),.c(1'b0),.co(int_co[0]),.sum(int_sum[0]));
+
+
+assign sum[7:0] = int_sum;
+assign sum[8] = int_co[7];
 endmodule
 ```
 

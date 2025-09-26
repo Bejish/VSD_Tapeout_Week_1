@@ -253,17 +253,17 @@ end
 
 **RTL Simulation Results:**
 <p align="center">
-   <img src="Images/ternary_operator_mux_wave1.png" alt="ternary operator mux RTL waveform" width="70%">
+   <img src="Images/ternary_operator_mux_w.png" alt="ternary operator mux RTL waveform" width="70%">
 </p>
 
 **Gate-Level Simulation Results:**  
 <p align="center">
-   <img src="Images/ternary_operator_mux_wave2.png" alt="ternary operator mux GLS waveform" width="70%">
+   <img src="Images/ternary_operator_gls.png" alt="ternary operator mux GLS waveform" width="70%">
 </p>
 
 **Synthesis Implementation:**
 <p align="center">
-   <img src="Images/ternary_operator_mux_netlist.png" alt="ternary operator mux synthesis" width="70%">
+   <img src="Images/ternary_operator_mux.png" alt="ternary operator mux synthesis" width="70%">
 </p>
 
 **Analysis:**

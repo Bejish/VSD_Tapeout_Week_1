@@ -253,7 +253,7 @@ end
 
 **RTL Simulation Results:**
 <p align="center">
-   <img src="Images/ternary_operator_mux_w.png" alt="ternary operator mux RTL waveform" width="70%">
+   <img src="Images/ternary_operator_w.png" alt="ternary operator mux RTL waveform" width="70%">
 </p>
 
 **Gate-Level Simulation Results:**  
@@ -287,7 +287,7 @@ endmodule
 
 **RTL Simulation Behavior:**
 <p align="center">
-   <img src="Images/bad_mux_wave1.png" alt="bad mux RTL waveform" width="70%">
+   <img src="Images/bad_mux_w.png" alt="bad mux RTL waveform" width="70%">
 </p>
 
 **Critical Observation:**
@@ -297,12 +297,12 @@ endmodule
 
 **Gate-Level Simulation:**
 <p align="center">
-   <img src="Images/bad_mux_wave2.png" alt="bad mux GLS waveform" width="70%">
+   <img src="Images/bad_mux_gls.png" alt="bad mux GLS waveform" width="70%">
 </p>
 
 **Synthesis Implementation:**
 <p align="center">
-   <img src="Images/bad_mux_synthesis.png" alt="bad mux synthesis result" width="70%">
+   <img src="Images/bad_mux.png" alt="bad mux synthesis result" width="70%">
 </p>
 
 **Mismatch Analysis:**
@@ -326,17 +326,17 @@ endmodule
 
 **RTL Simulation Results:**
 <p align="center">
-   <img src="Images/blocking_caveat_wave1.png" alt="blocking caveat RTL waveform" width="70%">
+   <img src="Images/blocking_caveat_w.png" alt="blocking caveat RTL waveform" width="70%">
 </p>
 
 **Gate-Level Simulation Results:**
 <p align="center">
-   <img src="Images/blocking_caveat_wave2.png" alt="blocking caveat GLS waveform" width="70%">
+   <img src="Images/blocking_caveat_gls.png" alt="blocking caveat GLS waveform" width="70%">
 </p>
 
 **Synthesis Implementation:**
 <p align="center">
-   <img src="Images/blocking_caveat_synthesis.png" alt="blocking caveat synthesis" width="70%">
+   <img src="Images/blocking_caveat.png" alt="blocking caveat synthesis" width="70%">
 </p>
 
 **Detailed Analysis:**

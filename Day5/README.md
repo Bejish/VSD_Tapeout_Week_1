@@ -168,12 +168,12 @@ endmodule
 
 **RTL Simulation Results:**
 <p align="center">
-   <img src="Images/incomp_if_w.png" alt="incomplete if RTL simulation" width="70%">
+   <img src="Images/incomp_if_w.png" alt="incomplete if RTL simulation" width="85%">
 </p>
 
 **Synthesis Implementation:**
 <p align="center">
-   <img src="Images/incomp_if.png" alt="incomplete if synthesis showing latch" width="70%">
+   <img src="Images/incomp_if.png" alt="incomplete if synthesis showing latch" width="85%">
 </p>
 
 **Critical Analysis:**
@@ -200,12 +200,12 @@ endmodule
 
 **RTL Simulation Analysis:**
 <p align="center">
-   <img src="Images/incomp_if2_w.png" alt="incomplete if2 RTL simulation" width="70%">
+   <img src="Images/incomp_if2_w.png" alt="incomplete if2 RTL simulation" width="85%">
 </p>
 
 **Synthesis Implementation:**
 <p align="center">
-   <img src="Images/incomp_if2.png" alt="incomplete if2 synthesis" width="70%">
+   <img src="Images/incomp_if2.png" alt="incomplete if2 synthesis" width="85%">
 </p>
 
 **Advanced Analysis:**
@@ -245,12 +245,12 @@ endmodule
 
 **Synthesis Results:**
 <p align="center">
-   <img src="Images/incomp_case.png" alt="incomplete case synthesis" width="70%">
+   <img src="Images/incomp_case.png" alt="incomplete case synthesis" width="85%">
 </p>
 
 **RTL Simulation:**
 <p align="center">
-   <img src="Images/incomp_case_w.png" alt="incomplete case simulation" width="70%">
+   <img src="Images/incomp_case_w.png" alt="incomplete case simulation" width="85%">
 </p>
 
 **Key Observations:**
@@ -278,12 +278,12 @@ endmodule
 
 **Synthesis Implementation:**
 <p align="center">
-   <img src="Images/comp_case.png" alt="complete case synthesis" width="70%">
+   <img src="Images/comp_case.png" alt="complete case synthesis" width="85%">
 </p>
 
 **RTL Simulation:**
 <p align="center">
-   <img src="Images/comp_case_w.png" alt="complete case simulation" width="70%">
+   <img src="Images/comp_case_w.png" alt="complete case simulation" width="85%">
 </p>
 
 **Optimization Results:**
@@ -312,19 +312,19 @@ endmodule
 
 **Overlapping Case Analysis:**
 
-**Synthesis Warning:**
+**Synthesis Implementation:**
 <p align="center">
-   <img src="Images/bad_case.png" alt="bad case synthesis with warnings" width="70%">
+   <img src="Images/bad_case.png" alt="bad case synthesis with warnings" width="85%">
 </p>
 
 **Simulation Results:**
 <p align="center">
-   <img src="Images/bad_case_w.png" alt="bad case simulation" width="70%">
+   <img src="Images/bad_case_w.png" alt="bad case simulation" width="85%">
 </p>
 
 **Gate Level Simulation Results:**
 <p align="center">
-   <img src="Images/bad_case_gls.png" alt="bad case simulation" width="70%">
+   <img src="Images/bad_case_gls.png" alt="bad case simulation" width="85%">
 </p>
 
 **Critical Issues:**
@@ -401,12 +401,12 @@ endmodule
 
 **Synthesis Implementation:**
 <p align="center">
-   <img src="Images/mux_generate.png" alt="mux generate synthesis" width="70%">
+   <img src="Images/mux_generate.png" alt="mux generate synthesis" width="85%">
 </p>
 
 **Simulation Results:**
 <p align="center">
-   <img src="Images/mux_generate_w.png" alt="mux generate simulation" width="70%">
+   <img src="Images/mux_generate_w.png" alt="mux generate simulation" width="85%">
 </p>
 
 ---
@@ -446,17 +446,17 @@ endmodule
 
 **Synthesis Implementation:**
 <p align="center">
-   <img src="Images/demux_case.png" alt="demux case synthesis" width="70%">
+   <img src="Images/demux_case.png" alt="demux case synthesis" width="85%">
 </p>
 
 **Simulation Results:**
 <p align="center">
-   <img src="Images/demux_case_w.png" alt="demux case simulation" width="70%">
+   <img src="Images/demux_case_w.png" alt="demux case simulation" width="85%">
 </p>
 
 **Gate Level Simulation Results:**
 <p align="center">
-   <img src="Images/demux_case_gls.png" alt="demux case simulation" width="70%">
+   <img src="Images/demux_case_gls.png" alt="demux case simulation" width="85%">
 </p>
 
 **Key Design Points:**
@@ -489,17 +489,17 @@ endmodule
 
 **Synthesis Implementation:**
 <p align="center">
-   <img src="Images/demux_generate.png" alt="demux generate synthesis" width="70%">
+   <img src="Images/demux_generate.png" alt="demux generate synthesis" width="85%">
 </p>
 
 **Simulation Results:**
 <p align="center">
-   <img src="Images/demux_generate_w.png" alt="demux generate simulation" width="70%">
+   <img src="Images/demux_generate_w.png" alt="demux generate simulation" width="85%">
 </p>
 
 **Gate Level Simulation Results:**
 <p align="center">
-   <img src="Images/demux_generate_gls.png" alt="demux generate simulation" width="70%">
+   <img src="Images/demux_generate_gls.png" alt="demux generate simulation" width="85%">
 </p>
 
 
@@ -535,17 +535,17 @@ endmodule
 
 **Synthesis Implementation:**
 <p align="center">
-   <img src="Images/rca.png" alt="ripple carry adder synthesis" width="70%">
+   <img src="Images/rca.png" alt="ripple carry adder synthesis" width="85%">
 </p>
 
 **Simulation Results:**
 <p align="center">
-   <img src="Images/rca_w.png" alt="ripple carry adder simulation" width="70%">
+   <img src="Images/rca_w.png" alt="ripple carry adder simulation" width="85%">
 </p>
 
 **Gate Level Simulation Results:**
 <p align="center">
-   <img src="Images/rca_gls.png" alt="ripple carry adder simulation" width="70%">
+   <img src="Images/rca_gls.png" alt="ripple carry adder simulation" width="85%">
 </p>
 
 **RCA Design Insights:**

@@ -1,1 +1,47 @@
+🛠️ Day 4 Advanced Command Arsenal
+🔬 Gate-Level Simulation Commands
+# Complete GLS flow with iVerilog
+# Step 1: Read RTL and generate netlist
+yosys> read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> read_verilog design.v
+yosys> synth -top design_module
+yosys> abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> write_verilog -noattr design_netlist.v
 
+# Step 2: Gate-Level Simulation  
+iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 \
+    ../my_lib/verilog_model/primitives.v \
+    ../my_lib/verilog_model/sky130_fd_sc_hd.v \
+    design_netlist.v design_tb.v
+
+./a.out
+gtkwave design_tb.vcd
+🔧 RTL vs GLS Comparison Commands
+# RTL Simulation
+iverilog design.v design_tb.v
+./a.out
+gtkwave design_tb.vcd &
+
+# GLS Simulation (in parallel terminal)
+iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 \
+    verilog_model/*.v design_netlist.v design_tb.v
+./a.out  
+gtkwave design_tb.vcd &
+🔧 Synthesis Commands for Each Example
+# For ternary_operator_mux
+yosys> read_verilog ternary_operator_mux.v
+yosys> synth -top ternary_operator_mux
+yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> show ternary_operator_mux
+
+# For bad_mux (demonstrates mismatch)
+yosys> read_verilog bad_mux.v
+yosys> synth -top bad_mux
+yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> show bad_mux
+
+# For blocking_caveat
+yosys> read_verilog blocking_caveat.v  
+yosys> synth -top blocking_caveat
+yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> show blocking_caveat

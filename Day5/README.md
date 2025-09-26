@@ -533,6 +533,11 @@ endmodule
 
 **RCA Analysis:**
 
+**Block Diagram**
+<p align="center">
+   <img src="Images/rca_diagram.png" alt="ripple carry adder synthesis" width="85%">
+</p>
+
 **Synthesis Implementation:**
 <p align="center">
    <img src="Images/rca.png" alt="ripple carry adder synthesis" width="85%">

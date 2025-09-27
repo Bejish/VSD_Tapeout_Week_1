@@ -1,1 +1,53 @@
+🛠️ Day 5 Advanced Command Arsenal
+🔀 If-Case Synthesis Commands
+# Synthesis with latch detection
+yosys> read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> read_verilog incomp_if.v
+yosys> synth -top incomp_if
 
+# Check for latches in synthesis statistics
+yosys> stat
+
+# Technology mapping
+yosys> abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> show incomp_if
+yosys> write_verilog incomp_if_netlist.v
+📋 Case Statement Analysis Commands
+# Complete case synthesis
+yosys> read_verilog comp_case.v
+yosys> synth -top comp_case
+yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# Incomplete case with warnings
+yosys> read_verilog incomp_case.v
+yosys> synth -top incomp_case
+# Observe latch warnings in output
+
+# Bad case with overlapping issues
+yosys> read_verilog bad_case.v  
+yosys> synth -top bad_case
+# Check for synthesis warnings
+🔄 Generate For Loop Commands
+# DEMUX with generate
+yosys> read_verilog demux_generate.v
+yosys> synth -top demux_generate
+yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> show demux_generate
+
+# RCA with full adder hierarchy
+yosys> read_verilog fa.v rca.v
+yosys> synth -top rca
+yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> show rca
+🎯 Complete Verification Flow
+# RTL Simulation
+iverilog incomp_if.v tb_incomp_if.v
+./a.out
+gtkwave tb_incomp_if.vcd
+
+# Synthesis and GLS
+yosys -s synth_script.ys
+iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 \
+    ../my_lib/verilog_model/*.v incomp_if_netlist.v tb_incomp_if.v
+./a.out
+gtkwave tb_incomp_if.vcd
